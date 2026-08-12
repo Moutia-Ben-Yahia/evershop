@@ -8,9 +8,9 @@
     "extensions/*"
   ],
   "scripts": {
-    "dev": "node ./packages/evershop/dist/bin/dev/index.js",
-    "start": "node ./packages/evershop/dist/bin/start/index.js",
-    "build": "node ./packages/evershop/dist/bin/build/index.js",
+    "dev": "node init && node ./packages/evershop/dist/bin/dev/index.js",
+    "start": "node init && node ./packages/evershop/dist/bin/start/index.js",
+    "build": "node init && node ./packages/evershop/dist/bin/build/index.js",
     "setup": "evershop install",
     "user:create": "evershop user:create",
     "seed": "evershop seed",
@@ -23,7 +23,7 @@
     "compile": "rimraf ./packages/evershop/dist && cd ./packages/evershop && swc ./src/ -d dist/ --config-file .swcrc --copy-files --strip-leading-paths",
     "compile:db": "rimraf ./packages/postgres-query-builder/dist && cd ./packages/postgres-query-builder && tsc",
     "compile:tsc": "rimraf ./packages/evershop/dist && cd ./packages/evershop && tsc && copyfiles -u 1 \"src/**/*.{graphql,scss,css,json}\" dist && chmod +x ./dist/bin/evershop.js",
-    "start:debug": "node ./packages/evershop/dist/bin/start/index.js --debug",
+    "start:debug": "node init && node ./packages/evershop/dist/bin/start/index.js --debug",
     "test": "ALLOW_CONFIG_MUTATIONS=true NODE_OPTIONS=--experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:e2e": "npm test --prefix tests/e2e",
     "test:e2e:headed": "npm run test:headed --prefix tests/e2e",
