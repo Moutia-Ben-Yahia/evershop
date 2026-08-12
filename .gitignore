@@ -1,5 +1,4 @@
 node_modules
-.env
 dist
 !packages/create-evershop-app/sample/extensions/sample/dist
 !packages/create-evershop-app/sample/themes/sample/dist
@@ -14,7 +13,6 @@ dist
 /themes
 .idea/*
 .evershop
-.vscode
 npm-debug.log
 /package-log.json
 /media
@@ -50,3 +48,4 @@ PRODUCT.md
 stress-report-*
 jmeter.log
 stress_test.py
+config.bat
