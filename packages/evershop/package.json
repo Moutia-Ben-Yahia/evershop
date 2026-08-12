@@ -131,9 +131,9 @@
   },
   "scripts": {
     "prepack": "rimraf dist && tsc && copyfiles -u 1 \"src/**/*.{graphql,scss,css,json}\" dist",
-    "dev": "node ./dist/bin/dev/index.js",
-    "start": "node ./dist/bin/start/index.js",
-    "build": "node ./dist/bin/build/index.js",
+    "dev": "node init && node ./dist/bin/dev/index.js",
+    "start": "node init && node ./dist/bin/start/index.js",
+    "build": "node init && node ./dist/bin/build/index.js",
     "user:create": "evershop user:create",
     "user:changePassword": "evershop user:changePassword",
     "test": "jest"

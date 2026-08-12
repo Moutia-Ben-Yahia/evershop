@@ -8,9 +8,9 @@
   "scripts": {
     "setup": "evershop install",
     "seed": "evershop seed",
-    "start": "evershop start",
-    "start:debug": "evershop start --debug",
-    "build": "evershop build",
+    "start": "node init && evershop start",
+    "start:debug": "node init && evershop start --debug",
+    "build": "node init && evershop build",
     "user:create": "evershop user:create",
     "user:changePassword": "evershop user:changePassword",
     "theme:active": "evershop theme:active",
